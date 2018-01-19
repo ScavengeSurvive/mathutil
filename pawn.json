@@ -1,5 +1,10 @@
 {
+    "user": "ScavengeSurvive",
+    "repo": "mathutil",
     "entry": "test.pwn",
     "output": "test.amx",
-    "dependencies": ["Southclaws/samp-stdlib"]
+    "dependencies": ["Southclaws/samp-stdlib"],
+    "runtime": {
+        "mode": "main"
+    }
 }

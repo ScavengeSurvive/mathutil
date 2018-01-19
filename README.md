@@ -4,18 +4,10 @@ A collection of useful mathematical functions. Documentation in source code.
 
 ## Installation
 
-Simply add to your `pawn.json`/`pawn.yaml`:
-
-```json
-{
-    "dependencies": ["ScavengeSurvive/mathutil"]
-}
-```
-
-Update your `dependencies` directory:
+Simply install to your project:
 
 ```bash
-sampctl package ensure
+sampctl package install ScavengeSurvive/mathutil
 ```
 
 Include in your code and begin using the library:
