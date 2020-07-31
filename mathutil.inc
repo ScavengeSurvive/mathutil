@@ -13,13 +13,8 @@
 
 // Truncates a value to the range 0.0 - 360.0
 stock Float:GetAbsoluteAngle(Float:angle) {
-	while(angle < 0.0) {
-		angle += 360.0;
-	}
-	while(angle > 360.0) {
-		angle -= 360.0;
-	}
-	return angle;
+	// Note that 360 is equal to 0
+	return ((angle / 360.0) - floatround((angle / 360.0), floatround_floor)) * 360.0;
 }
 
 // Returns the offset heading from north between a point and a destination
