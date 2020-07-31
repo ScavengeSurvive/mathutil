@@ -13,9 +13,8 @@
 
 // Truncates a value to the range 0.0 - 360.0
 stock Float:GetAbsoluteAngle(Float:angle) {
-	new const Float:temp = floatround(angle / 360, floatround_floor) * 360;
-	// check if temp mod angle is 0 then we distract by 360
-	return angle - (temp >= 360 && angle == temp ? temp - 360 : temp);
+	// Note that 360 is equal to 0
+	return ((angle / 360.0) - floatround((angle / 360.0), floatround_floor)) * 360.0;
 }
 
 // Returns the offset heading from north between a point and a destination
