@@ -127,6 +127,8 @@ stock PickFromList(max, count, output[]) {
 }
 
 // Checks if a variable is not a number
-stock IsNaN(Float:number) {
-	return !(number <= 0 || number > 0);
-}
+#if !defined IsNaN
+	stock IsNaN(Float:number) {
+		return !(number <= 0 || number > 0);
+	}
+#endif
